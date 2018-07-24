@@ -58,7 +58,7 @@ AC_DEFUN([PBS_AC_WITH_EDITLINE],
       [editline_lib="-ledit"],
       AS_IF([test -r /usr/lib/libedit.so],
         [editline_lib="-ledit"],
-        AS_IF([test -r /usr/lib/x86_64-linux-gnu/libedit.so],
+        AS_IF([test -r /usr/lib/x86_64-linux-gnu/libedit.so -o -r /usr/lib/powerpc64le-linux-gnu/libedit.so],
           [editline_lib="-ledit"],
           AC_MSG_ERROR([editline shared object library not found.])))),
     # Using developer installed editline
